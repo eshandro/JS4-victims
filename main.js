@@ -17,21 +17,27 @@ function startDisasterRelief() {
 	//Add people to the victims list
 	var numberOfVictims = parseInt(prompt("How many victims are there to help?"));
 	var victims = addPeopleToList(numberOfVictims);
-	console.log(victims)
 	
 	//Add people to the volunteers list
 	var numberOfVolunteers = +prompt("How many volunteers are there?");
 	var volunteers = addPeopleToList(numberOfVolunteers);
-	console.log(volunteers);
 
-	
+	//Create list of victims' names
+	var victimsList = "";
+	for(i=0; i < victims.length; i++) {
+		victimsList = victimsList + "\n\t " + (i + 1) + ". " + victims[i]['name'];
+	}
 
+	//Creat list of volunteers' names
+	var volunteersList = "";
+	for(i=0; i < victims.length; i++) {
+		volunteersList = volunteersList + "\n\t " + (i + 1) + ". " + volunteers[i]['name'];
+	}
 
-	// alert("Thanks for helping us start Disaster Relief.\n\nThere are " 
-	// 	+ numberOfVictims + " people who need help. \nAnd, " + numberOfVolunteers + 
-	// 	" volunteers who can help.\n\nVictims:\n\t" + victims[0] + 
-	// 	"\n\nVolunteers:\n\t" + volunteers);
-
+	alert("Thanks for helping us start Disaster Relief.\n\nThere are " 
+		+ numberOfVictims + " people who need help. \nAnd, " + numberOfVolunteers + 
+		" volunteers who can help.\n\nNeed Help:" + victimsList + 
+		"\n\nOffering Help:" + volunteersList);
 
 };
 startDisasterRelief();
