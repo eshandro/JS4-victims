@@ -59,11 +59,11 @@ function startDisasterRelief() {
 	};
 
 	//Add people to the victims list
-	var victimsToEnter = confirm("Click OK if you have victims to enter and Cancel if don't have any to enter.")
+	var victimsToEnter = confirm("Click OK if you have VICTIMS to enter and Cancel if don't have any to enter.")
 	var victims = addPeopleToList(victimsToEnter);
 	
 	//Add people to the volunteers list
-	var volunteersToEnter = confirm("Click OK if you have volunteers to enter and Cancel if don't have any to enter.")
+	var volunteersToEnter = confirm("Click OK if you have VOLUNTEERS to enter and Cancel if don't have any to enter.")
 	var volunteers = addPeopleToList(volunteersToEnter);
 
 	//Create list of victims' names
@@ -82,6 +82,26 @@ function startDisasterRelief() {
 		+ victims.length + " people who need help. \nAnd, " + volunteers.length + 
 		" volunteers who can help.\n\nNeed Help:" + victimsList + 
 		"\n\nOffering Help:" + volunteersList);
+
+	// Find named victim's street name
+	var victimName = prompt("Enter the name of a person in need:");
+	for(i=0; i < victims.length; i++) {
+		if (victims[i]['name'] === victimName) {
+			var victimStreet = victims[i]['street'];
+		}
+	}
+
+	var volunteersAvailable = "";
+
+	// Find any volunteers that match victim's street name
+	for(i=0; i < volunteers.length; i++) {
+		if (volunteers[i]['street'] === victimStreet) {
+			volunteersAvailable = volunteersAvailable + "\n\t " + (i + 1) + ". " + 
+			volunteers[i]['name'];
+		}
+	}
+
+	alert("Here is a list of volunteers near by who can help:" + volunteersAvailable);
 };
 
 startDisasterRelief();
