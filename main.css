@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+.victims-form label,
+.volunteers-form label {
+	display: inline-block;
+	width: 17em;
+	padding: 20px 10px 0 0;	
+	text-align: right;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.victims-form input,
+.volunteers-form input {
+	display: inline-block;
+	width: 20em;
+	border: 1px solid lightslategray;
+	border-radius: 5px;
+	line-height: 1.8em; 
+}
+
+.victims-form button,
+.volunteers-form button {
+	display: block;
+	margin: 20px 0 0 17em;
+	width: 12em;
+	padding: 5px;
+	border-style: none;
+	border-radius: 8px;
+}
+
+.victims-form fieldset,
+.volunteers-form fieldset {
+	width: 40em;
+	margin-top: 100px;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-top: 2px solid grey;
+}

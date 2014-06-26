@@ -104,4 +104,4 @@ function startDisasterRelief() {
 	alert("Here is a list of volunteers near by who can help:" + volunteersAvailable);
 };
 
-startDisasterRelief();
+// startDisasterRelief();

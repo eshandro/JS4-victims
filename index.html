@@ -3,10 +3,49 @@
 <head>
   <meta charset="utf-8">
   <title>Untitled</title>
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 	
-  <script src="main.js"></script>
+  <div>
+  	<form class="victims-form">
+  		<fieldset>
+  			<legend>Enter Victim Information</legend>
+	  		<label for="name">Victim's Name</label>
+	  		<input type="text" name="name">
 
+	  		<label for="tele">Victim's Telephone Number</label>
+	  		<input type="text" name="tele">
+
+	  		<label for="street">Victim's Street name</label>
+	  		<input type="text" name="street">
+
+	  		<button>Submit Victim Info</button>
+  		</fieldset>
+  	</form>
+
+  	<form class="volunteers-form">
+   		<fieldset>
+  			<legend>Enter Volunteer Information</legend>
+	  		<label for="name">Volunteer's Name</label>
+	  		<input type="text" name="name">
+
+	  		<label for="tele">Volunteer's Telephone Number</label>
+	  		<input type="text" name="tele">
+
+	  		<label for="street">Volunteer's Street name</label>
+	  		<input type="text" name="street">
+
+	  		<button>Submit Volunteer Info</button>
+  		</fieldset>
+  	</form> 
+  </div>
+  
+  <div class="display-info">
+  </div>	
+
+
+  <script src="main.js"></script>
 </body>
 </html>
